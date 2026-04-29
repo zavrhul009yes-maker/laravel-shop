@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Buyer;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +21,20 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+
+        User::insert([
+            'name'=>'Рина',
+            'email' => 'uuu@gmail.com',
+            'password' => '12345678'
+        ]);
+        Buyer::insert([
+            'tel'=>'+7800535362',
+            'discount'=> 10,
+            'user_id' => 1
+        ]);
     }
+
+
 }
